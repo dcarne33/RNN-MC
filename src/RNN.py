@@ -95,8 +95,12 @@ def remove_ones_zeros(results):
 def forward(prop):
     # import weights and biases
     w1 = np.loadtxt('RNN_Model/w1_rnn1.7.txt', dtype=np.float32)
-    w2 = np.loadtxt('RNN_Model/w2_rnn1.7.txt', dtype=np.float32)
-    w3 = np.loadtxt('RNN_Model/w3_rnn1.7.txt', dtype=np.float32)
+    w2a = np.loadtxt('RNN_Model/w2a_rnn1.7.txt', dtype=np.float32)
+    w2b = np.loadtxt('RNN_Model/w2b_rnn1.7.txt', dtype=np.float32)
+    w2 = np.concatenate((w2a, w2b), axis=0)
+    w3a = np.loadtxt('RNN_Model/w3a_rnn1.7.txt', dtype=np.float32)
+    w3b = np.loadtxt('RNN_Model/w3b_rnn1.7.txt', dtype=np.float32)
+    w3 = np.concatenate((w3a, w3b), axis=0)
     wo = np.loadtxt('RNN_Model/wo_rnn1.7.txt', dtype=np.float32)
     wh = np.loadtxt('RNN_Model/wh_rnn1.7.txt', dtype=np.float32)
 
