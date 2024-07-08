@@ -4,6 +4,7 @@ Recurrent Neural Network (RNN) for accelerated multi-layer Monte Carlo predictio
 - Daniel Carne
 - Ziqi Guo
 - Xiulin Ruan
+
 Cite:
 # How to use
 # About
