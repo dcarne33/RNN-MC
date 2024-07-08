@@ -91,6 +91,19 @@ def remove_ones_zeros(results):
             results[i, 2] = 1
     return results
 
+def check_limits(prop):
+    for i in range(len(prop[0, 0, :])):
+        for j in range(len(prop[:, 0, 0])):
+            if (prop[j, 0, i] < 1 and prop[j, 0, i] != 0) or (prop[j, 0, i] > 2.5):
+                print('WARNING: Refractive index of ', prop[j, 0, i], " is out of bounds of range [1, 2.5].")
+            if prop[j, 1, i] > 50000:
+                print('WARNING: Absorption coefficient * thickness of ', prop[j, 1, i], " is out of bounds of range [0, 50,000].")
+            if prop[j, 2, i] > 50000:
+                print('WARNING: Scattering coefficient * thickness of ', prop[j, 2, i], " is out of bounds of range [0, 50,000].")
+            if prop[j, 3, i] < 0 or prop[j, 3, i] > 1:
+                print('WARNING: Asymmetry parameter of ', prop[j, 3, i], " is out of bounds of range [0, 1].")
+    return
+
 
 def forward(prop):
     # import weights and biases
@@ -122,6 +135,9 @@ def forward(prop):
                 num_layers = j
                 break
         prop[:, 4, i] = num_layers
+
+    # check limits RNN is trained on
+    check_limits(prop)
 
     # normalize each feature
     prop[:, 0, :] = (prop[:, 0, :]) / 2.5
