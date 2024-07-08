@@ -11,7 +11,7 @@ The src folder contains two python files and a folder titled 'RNN_Model'. To run
 
 The user will edit the array titled "prop" in the Main.py file which contains three dimensions [maximum number of layers to simulate, optical properties, number of simulations]. The number of optical properties will always be 5, which in order are the refractive index (n), absorption coefficient (mu_a), scattering coefficient (mu_s), asymmetry parameter (g), and thickness (t). The base units for the absorption coefficient, scattering coefficient, and thickness must be the same.
 
-The RNN has been trained on the following range of non-dimensionalized optical properties. The RNN will provide a warning if runing values outside of this range.
+The RNN has been trained on the following range of non-dimensionalized optical properties. The RNN will provide a warning if values are outside of this range.
 | Property | Range    |
 | :---:   | :---: |
 | n | 1 - 2.5   |
