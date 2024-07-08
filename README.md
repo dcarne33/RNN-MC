@@ -7,6 +7,7 @@ Recurrent Neural Network (RNN) for accelerated multi-layer Monte Carlo predictio
 
 Cite:
 # How to use
-In the src folder contains python file and a folder titled 'RNN_Model'. To run the RNN, open the Main.py file where comments detail how to run the program. The Main.py file, RNN.py file, and RNN_Model folder must all be in the same directory. The RNN_Model folder ocntains all the weights and biases for the RNN.
+The src folder contains two python files and a folder titled 'RNN_Model'. To run RNN-MC, open the Main.py file where comments detail how to run the program. The Main.py file, RNN.py file, and RNN_Model folder must all be in the same directory. The RNN_Model folder contains all the weights and biases for the RNN.
+The user will create and edit the numpy array titled "prop" in the Main.py file which contains three dimensions [maximum number of layers to simulate, optical properties, number of simulations].
 # About
 The RNN here is trained on 224,000 plane-parallel Monte Carlo simulations across a broad range of optical properties to provide up to 1000x speedup.
