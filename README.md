@@ -15,11 +15,8 @@ The RNN has been trained on the following range of non-dimensionalized optical p
 | Property | Range    |
 | :---:   | :---: |
 | n | 1 - 2.5   |
-| :---:   | :---: |
 | mu_a * t | 0 - 50,000   |
-| :---:   | :---: |
 | mu_s * t | 0 - 50,000   |
-| :---:   | :---: |
 | g | 0 - 1   |
 # About
 The RNN here is trained on 224,000 plane-parallel Monte Carlo simulations across a broad range of optical properties to provide up to 1000x speedup.
